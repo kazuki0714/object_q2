@@ -1,0 +1,2 @@
+class Ferrari < Car
+end

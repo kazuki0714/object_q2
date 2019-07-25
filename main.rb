@@ -17,6 +17,4 @@ cars = []
   end
 end
 
-if __FILE__ == $0
-  main
-end
+main # 出力

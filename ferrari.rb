@@ -10,24 +10,14 @@ class Ferrari < Car
 
   def lift_up(car)
     @is_lift = true
-    puts '----フェラーリ（リフトアップ）----'
-    puts "車種: #{car.type}"
-    puts "定員: #{car.capasity}"
-    puts "価格: #{car.price}万円"
-    puts "時速: #{car.speed* 0.8}km"
-    puts "車高: #{car.height+ 40}cm"
-    puts "装備: #{car.equipment.join(', ')}"
+    @speed *= 0.8
+    @height += 40
   end
 
-  def  lift_down(car)
+  def lift_down(car)
     return unless @is_lift
+    @speed /= 0.8
+    @height -= 40
     @is_lift = false
-    puts '----フェラーリ（リフトダウン）----'
-    puts "車種: #{car.type}"
-    puts "定員: #{car.capasity}"
-    puts "価格: #{car.price}万円"
-    puts "時速: #{car.speed}km"
-    puts "車高: #{car.height}cm"
-    puts "装備: #{car.equipment.join(', ')}"
   end
 end

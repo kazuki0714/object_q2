@@ -1,21 +1,18 @@
-# car.rb
+# parent class
 class Car
-  def initialize(type,capacity, price, speed)
-    @type = type
-    @capacity = capacity
-    @price = price
-    @speed = speed
+  attr_accessor :type, :capasity, :price, :speed, :height
+
+  def equipment
+    %w[アクセル ブレーキ]
   end
 
-  def accel
-    "アクセル"
-  end
-
-  def brake
-    "ブレーキ"
-  end
-
-  def to_s
-    " 種類：#{@type}、定員：#{@capacity}人、価格：#{@price}万円、加速：#{@speed}km、装備：#{accel}、#{brake} "
+  def output_information(car)
+    puts '---------------------------------'
+    puts "車種: #{car.type}"
+    puts "定員: #{car.capasity}"
+    puts "価格: #{car.price}万円"
+    puts "時速: #{car.speed}km"
+    puts "車高: #{car.height}cm"
+    puts "装備: #{car.equipment.join(', ')}"
   end
 end

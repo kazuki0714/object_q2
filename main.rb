@@ -1,20 +1,16 @@
-# require ではなく Dir... にするとエラー発生
+require_relative 'car'
+require_relative 'ferrari'
+require_relative 'honda'
+require_relative 'nissan'
 
-require_relative "car"
-require_relative "ferrari"
-require_relative "honda"
-require_relative "nissan"
+honda = Honda.new
+honda.output_information(honda)
 
-def main
+nissan = Nissan.new
+nissan.output_information(nissan)
 
-cars = []
-  cars << Honda.new("Honda",8, 100, 10)
-  cars << Nissan.new("Nissan",5, 50, 10)
-  cars << Ferrari.new("Ferrari",2, 2_000, 100)
+ferrari = Ferrari.new
+ferrari.output_information(ferrari)
 
-  cars.each do |car|
-    puts car
-  end
-end
-
-main # 出力
+ferrari.lift_up(ferrari)
+ferrari.lift_down(ferrari)
